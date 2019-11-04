@@ -8,12 +8,7 @@ import org.springframework.stereotype.Service;
 
 
 import java.util.List;
-/**
- *@ClassName UserServiceImpl.java
- *@Description 用户实现类
- *@Author Xiao Nong
- *@Date 2018/12/1
-  **/
+
 @Service
 public class UserServiceImpl implements UserService  {
 
@@ -33,8 +28,8 @@ public class UserServiceImpl implements UserService  {
     }
 
     @Override
-    public void insert(User user) {
-        userMapper.insert(user);
+    public void insert(User user, String name, String password) {
+        userMapper.insert(user, name,password);
     }
 
     @Override
